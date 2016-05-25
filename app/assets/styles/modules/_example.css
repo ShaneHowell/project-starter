@@ -2,6 +2,7 @@ body {
   margin: 2rem auto;
   max-width: 71.25rem;
   width: 90%;
+  background: #ff0;
 }
 
 .bolt-icon {
@@ -11,7 +12,8 @@ body {
   &::after {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
 
   &--before {
@@ -42,6 +44,16 @@ body {
   display: inline-block;
 }
 
+@-webkit-keyframes backgroundRotate {
+  20% {
+    fill: #8577b9;
+  }
+
+  70% {
+    fill: #efc75e;
+  }
+}
+
 @keyframes backgroundRotate {
   20% {
     fill: #8577b9;
@@ -52,25 +64,57 @@ body {
   }
 }
 
-@keyframes takeoff {
+@-webkit-keyframes takeoff {
   0% {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 
   30% {
-    transform: translate3d(4rem, -4rem, 0);
+    -webkit-transform: translate3d(4rem, -4rem, 0);
+            transform: translate3d(4rem, -4rem, 0);
   }
 
   31% {
-    transform: translate3d(5rem, 5rem, 0);
+    -webkit-transform: translate3d(5rem, 5rem, 0);
+            transform: translate3d(5rem, 5rem, 0);
   }
 
   32% {
-    transform: translate3d(-5rem, 5rem, 0);
+    -webkit-transform: translate3d(-5rem, 5rem, 0);
+            transform: translate3d(-5rem, 5rem, 0);
   }
 
   50% {
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes takeoff {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+
+  30% {
+    -webkit-transform: translate3d(4rem, -4rem, 0);
+            transform: translate3d(4rem, -4rem, 0);
+  }
+
+  31% {
+    -webkit-transform: translate3d(5rem, 5rem, 0);
+            transform: translate3d(5rem, 5rem, 0);
+  }
+
+  32% {
+    -webkit-transform: translate3d(-5rem, 5rem, 0);
+            transform: translate3d(-5rem, 5rem, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 
@@ -79,10 +123,12 @@ body {
   overflow: hidden;
 
   .background {
-    animation: backgroundRotate 5s infinite .5s;
+    -webkit-animation: backgroundRotate 5s infinite .5s;
+            animation: backgroundRotate 5s infinite .5s;
   }
 
   .plane {
-    animation: takeoff 5s infinite .5s;
+    -webkit-animation: takeoff 5s infinite .5s;
+            animation: takeoff 5s infinite .5s;
   }
 }
